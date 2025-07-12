@@ -2,15 +2,135 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>شبکه رسانه‌ای حرفه‌ای</title>
   <style>
-    body { font-family: Tahoma, sans-serif; direction: rtl; text-align: center; background: #f0f0f0; padding: 50px; }
-    h1 { color: #0055a5; }
-    p { font-size: 1.2em; }
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Vazirmatn', sans-serif;
+      direction: rtl;
+    }
+    body {
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: url('https://picsum.photos/1200/400?grayscale') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    }
+    header h1 {
+      font-size: 2.8em;
+    }
+    main {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 1.8em;
+      color: #0055a5;
+      margin-bottom: 10px;
+      border-right: 5px solid #0055a5;
+      padding-right: 10px;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .service-box {
+      flex: 1 1 300px;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+    }
+    .service-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+    footer {
+      background: #0055a5;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+    footer a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+        text-align: center;
+        padding: 0 20px;
+      }
+      .services {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>به شبکه رسانه‌ای حرفه‌ای خوش آمدید</h1>
-  <p>ما تولیدکننده محتوای تخصصی، آموزشی و رسانه‌ای هستیم.</p>
+
+  <header>
+    <h1>شبکه رسانه‌ای حرفه‌ای</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>درباره ما</h2>
+      <p>
+        ما یک شبکه رسانه‌ای خلاق و حرفه‌ای هستیم که تمرکز ما روی تولید محتوای تخصصی، آموزشی، فرهنگی و هنری است.
+      </p>
+    </section>
+
+    <section>
+      <h2>خدمات ما</h2>
+      <div class="services">
+        <div class="service-box">
+          <h3>تولید ویدیو</h3>
+          <p>ساخت تیزر، مستند، تبلیغات و محتوای آموزشی با کیفیت بالا.</p>
+        </div>
+        <div class="service-box">
+          <h3>پخش زنده</h3>
+          <p>پوشش زنده رویدادها، همایش‌ها و کنفرانس‌های شما.</p>
+        </div>
+        <div class="service-box">
+          <h3>طراحی گرافیک</h3>
+          <p>طراحی لوگو، پوستر، کاور شبکه‌های اجتماعی و برندینگ.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>تماس با ما</h2>
+      <p>برای همکاری و ارتباط بیشتر، به ما ایمیل بزنید:  
+        <a href="mailto:example@example.com">example@example.com</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © ۲۰۲۵ شبکه رسانه‌ای حرفه‌ای |
+    <a href="#">اینستاگرام</a> |
+    <a href="#">تلگرام</a> |
+    <a href="#">یوتیوب</a>
+  </footer>
+
 </body>
 </html>
