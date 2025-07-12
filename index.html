@@ -1,136 +1,186 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>شبکه رسانه‌ای حرفه‌ای</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>عصر تی‌وی - قالب نمونه</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
+    /* ریست اولیه */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Vazirmatn', sans-serif;
-      direction: rtl;
     }
+
     body {
-      background: #f4f4f4;
-      color: #333;
+      font-family: 'Tahoma', sans-serif;
+      background-color: #121212;
+      color: #eee;
+      direction: rtl;
+      line-height: 1.6;
     }
+
     header {
-      background: url('https://picsum.photos/1200/400?grayscale') center/cover no-repeat;
+      background-color: #1f1f1f;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #ff5722;
+    }
+
+    header .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff5722;
+      cursor: pointer;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #eee;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff5722;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .live-stream {
+      background-color: #222;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+
+    .live-stream h2 {
+      color: #ff5722;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    .live-video {
+      width: 100%;
       height: 300px;
+      background: #000;
+      border-radius: 8px;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: white;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+      color: #999;
+      font-size: 18px;
     }
-    header h1 {
-      font-size: 2.8em;
-    }
-    main {
-      padding: 30px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    section {
-      margin-bottom: 40px;
-    }
-    h2 {
-      font-size: 1.8em;
-      color: #0055a5;
-      margin-bottom: 10px;
-      border-right: 5px solid #0055a5;
-      padding-right: 10px;
-    }
-    .services {
+
+    .categories {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
+      justify-content: center;
     }
-    .service-box {
-      flex: 1 1 300px;
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: 0.3s ease;
+
+    .category-card {
+      background-color: #1e1e1e;
+      border-radius: 8px;
+      width: 280px;
+      padding: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s;
     }
-    .service-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+
+    .category-card:hover {
+      background-color: #333;
     }
+
+    .category-card h3 {
+      margin-bottom: 10px;
+      color: #ff5722;
+    }
+
     footer {
-      background: #0055a5;
-      color: white;
+      background-color: #1f1f1f;
+      padding: 20px 30px;
       text-align: center;
-      padding: 20px;
+      color: #777;
       margin-top: 50px;
+      border-top: 1px solid #333;
     }
-    footer a {
-      color: #fff;
-      margin: 0 10px;
-      text-decoration: none;
-    }
+
+    /* ریسپانسیو */
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2em;
-        text-align: center;
-        padding: 0 20px;
-      }
-      .services {
+      header {
         flex-direction: column;
+        gap: 15px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .categories {
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>شبکه رسانه‌ای حرفه‌ای</h1>
-  </header>
+<header>
+  <div class="logo">عصر تی‌وی</div>
+  <nav>
+    <ul>
+      <li><a href="#">خانه</a></li>
+      <li><a href="#">پخش زنده</a></li>
+      <li><a href="#">دسته‌بندی‌ها</a></li>
+      <li><a href="#">ورود</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <main>
-    <section>
-      <h2>درباره ما</h2>
-      <p>
-        ما یک شبکه رسانه‌ای خلاق و حرفه‌ای هستیم که تمرکز ما روی تولید محتوای تخصصی، آموزشی، فرهنگی و هنری است.
-      </p>
-    </section>
+<main>
+  <section class="live-stream">
+    <h2>پخش زنده</h2>
+    <div class="live-video">ویدیو زنده اینجا قرار می‌گیرد</div>
+  </section>
 
-    <section>
-      <h2>خدمات ما</h2>
-      <div class="services">
-        <div class="service-box">
-          <h3>تولید ویدیو</h3>
-          <p>ساخت تیزر، مستند، تبلیغات و محتوای آموزشی با کیفیت بالا.</p>
-        </div>
-        <div class="service-box">
-          <h3>پخش زنده</h3>
-          <p>پوشش زنده رویدادها، همایش‌ها و کنفرانس‌های شما.</p>
-        </div>
-        <div class="service-box">
-          <h3>طراحی گرافیک</h3>
-          <p>طراحی لوگو، پوستر، کاور شبکه‌های اجتماعی و برندینگ.</p>
-        </div>
-      </div>
-    </section>
+  <section class="categories">
+    <div class="category-card">
+      <h3>اخبار</h3>
+      <p>جدیدترین اخبار و تحلیل‌ها</p>
+    </div>
+    <div class="category-card">
+      <h3>ورزش</h3>
+      <p>برنامه‌های ورزشی و مسابقات</p>
+    </div>
+    <div class="category-card">
+      <h3>فیلم و سریال</h3>
+      <p>مجموعه‌های سینمایی و تلویزیونی</p>
+    </div>
+    <div class="category-card">
+      <h3>موسیقی</h3>
+      <p>کنسرت‌ها و موزیک ویدیوها</p>
+    </div>
+  </section>
+</main>
 
-    <section>
-      <h2>تماس با ما</h2>
-      <p>برای همکاری و ارتباط بیشتر، به ما ایمیل بزنید:  
-        <a href="mailto:example@example.com">example@example.com</a>
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    © ۲۰۲۵ شبکه رسانه‌ای حرفه‌ای |
-    <a href="#">اینستاگرام</a> |
-    <a href="#">تلگرام</a> |
-    <a href="#">یوتیوب</a>
-  </footer>
+<footer>
+  © 2025 عصر تی‌وی | تمام حقوق محفوظ است
+</footer>
 
 </body>
 </html>
