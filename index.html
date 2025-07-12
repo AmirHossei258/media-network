@@ -3,184 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>عصر تی‌وی - قالب نمونه</title>
+  <title>شبکه رسانه ای عماد</title>
   <style>
-    /* ریست اولیه */
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    body {
-      font-family: 'Tahoma', sans-serif;
-      background-color: #121212;
-      color: #eee;
-      direction: rtl;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #1f1f1f;
-      padding: 20px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 2px solid #ff5722;
-    }
-
-    header .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #ff5722;
-      cursor: pointer;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #eee;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #ff5722;
-    }
-
-    main {
-      max-width: 1200px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-
-    .live-stream {
-      background-color: #222;
-      padding: 15px;
-      border-radius: 8px;
-      margin-bottom: 30px;
-    }
-
-    .live-stream h2 {
-      color: #ff5722;
-      margin-bottom: 15px;
-      font-size: 22px;
-    }
-
-    .live-video {
-      width: 100%;
-      height: 300px;
-      background: #000;
-      border-radius: 8px;
+    body, html {
+      height: 100%;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      font-family: 'Vazirmatn', Tahoma, sans-serif;
+      color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: #999;
-      font-size: 18px;
-    }
-
-    .categories {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .category-card {
-      background-color: #1e1e1e;
-      border-radius: 8px;
-      width: 280px;
-      padding: 15px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .category-card:hover {
-      background-color: #333;
-    }
-
-    .category-card h3 {
-      margin-bottom: 10px;
-      color: #ff5722;
-    }
-
-    footer {
-      background-color: #1f1f1f;
-      padding: 20px 30px;
+      flex-direction: column;
       text-align: center;
-      color: #777;
-      margin-top: 50px;
-      border-top: 1px solid #333;
+      padding: 20px;
     }
 
-    /* ریسپانسیو */
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        gap: 15px;
-      }
+    .logo {
+      width: 140px;
+      height: 140px;
+      background: url('https://cdn-icons-png.flaticon.com/512/906/906334.png') no-repeat center/contain;
+      margin-bottom: 25px;
+      border-radius: 50%;
+      box-shadow: 0 0 20px #ff6f61;
+    }
 
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-      }
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+      text-shadow: 0 0 10px #ff6f61;
+    }
 
-      .categories {
-        flex-direction: column;
-        align-items: center;
+    p {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #ff6f61;
+      text-shadow: 0 0 5px #ff6f61;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+      .logo {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
       }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <div class="logo">عصر تی‌وی</div>
-  <nav>
-    <ul>
-      <li><a href="#">خانه</a></li>
-      <li><a href="#">پخش زنده</a></li>
-      <li><a href="#">دسته‌بندی‌ها</a></li>
-      <li><a href="#">ورود</a></li>
-    </ul>
-  </nav>
-</header>
-
-<main>
-  <section class="live-stream">
-    <h2>پخش زنده</h2>
-    <div class="live-video">ویدیو زنده اینجا قرار می‌گیرد</div>
-  </section>
-
-  <section class="categories">
-    <div class="category-card">
-      <h3>اخبار</h3>
-      <p>جدیدترین اخبار و تحلیل‌ها</p>
-    </div>
-    <div class="category-card">
-      <h3>ورزش</h3>
-      <p>برنامه‌های ورزشی و مسابقات</p>
-    </div>
-    <div class="category-card">
-      <h3>فیلم و سریال</h3>
-      <p>مجموعه‌های سینمایی و تلویزیونی</p>
-    </div>
-    <div class="category-card">
-      <h3>موسیقی</h3>
-      <p>کنسرت‌ها و موزیک ویدیوها</p>
-    </div>
-  </section>
-</main>
-
-<footer>
-  © 2025 عصر تی‌وی | تمام حقوق محفوظ است
-</footer>
+  <div class="logo"></div>
+  <h1>شبکه رسانه ای عماد</h1>
+  <p>شبکه رسانه ای برای محتوای شما</p>
 
 </body>
 </html>
