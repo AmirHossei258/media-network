@@ -1,75 +1,148 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>شبکه رسانه ای عماد</title>
+  <meta charset="UTF-8">
+  <title>شبکه رسانه‌ای عماد</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
 
-    * {
+    body {
       margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      font-family: 'Vazirmatn', sans-serif;
+      background-color: #f5f5f5;
+      color: #222;
     }
 
-    body, html {
-      height: 100%;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      font-family: 'Vazirmatn', Tahoma, sans-serif;
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
+    header {
+      background-color: #002f3d;
+      color: white;
       padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .logo {
-      width: 140px;
-      height: 140px;
-      background: url('https://cdn-icons-png.flaticon.com/512/906/906334.png') no-repeat center/contain;
-      margin-bottom: 25px;
-      border-radius: 50%;
-      box-shadow: 0 0 20px #ff6f61;
+      font-size: 24px;
+      font-weight: bold;
     }
 
-    h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      letter-spacing: 3px;
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      cursor: pointer;
+    }
+
+    .main-container {
+      display: flex;
+      max-width: 1200px;
+      margin: 30px auto;
+      gap: 20px;
+      padding: 0 15px;
+    }
+
+    .main-content {
+      flex: 3;
+    }
+
+    .sidebar {
+      flex: 1;
+      background-color: #ffffff;
+      padding: 15px;
+      border: 1px solid #ddd;
+    }
+
+    .featured-news {
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 30px;
+      border: 1px solid #ccc;
+    }
+
+    .featured-news img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .featured-news h2 {
+      margin-top: 15px;
+      color: #003147;
+    }
+
+    .news-list article {
+      background: white;
       margin-bottom: 15px;
-      text-shadow: 0 0 10px #ff6f61;
+      padding: 15px;
+      border: 1px solid #ddd;
     }
 
-    p {
-      font-size: 1.6rem;
-      font-weight: 600;
-      color: #ff6f61;
-      text-shadow: 0 0 5px #ff6f61;
-    }
-
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 2.2rem;
-      }
-      p {
-        font-size: 1.2rem;
-      }
-      .logo {
-        width: 100px;
-        height: 100px;
-        margin-bottom: 20px;
-      }
+    footer {
+      text-align: center;
+      background-color: #002f3d;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
-  <div class="logo"></div>
-  <h1>شبکه رسانه ای عماد</h1>
-  <p>شبکه رسانه ای برای محتوای شما</p>
+  <header>
+    <div class="logo">شبکه رسانه‌ای عماد</div>
+    <nav>
+      <ul>
+        <li>خانه</li>
+        <li>بیانات</li>
+        <li>فیلم‌ها</li>
+        <li>آرشیو</li>
+        <li>تماس</li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="main-container">
+    <main class="main-content">
+      <section class="featured-news">
+        <img src="https://via.placeholder.com/800x400" alt="خبر ویژه">
+        <h2>عنوان خبر ویژه اینجاست</h2>
+        <p>خلاصه‌ای از خبر مهم روز که به صورت ویژه نمایش داده می‌شود. این بخش جلب توجه می‌کند.</p>
+      </section>
+
+      <section class="news-list">
+        <article>
+          <h3>عنوان خبر اول</h3>
+          <p>متن خلاصه خبر اول اینجاست...</p>
+        </article>
+        <article>
+          <h3>عنوان خبر دوم</h3>
+          <p>متن خلاصه خبر دوم اینجاست...</p>
+        </article>
+        <article>
+          <h3>عنوان خبر سوم</h3>
+          <p>متن خلاصه خبر سوم اینجاست...</p>
+        </article>
+      </section>
+    </main>
+
+    <aside class="sidebar">
+      <h3>اخبار فوری</h3>
+      <ul>
+        <li>خبر فوری شماره ۱</li>
+        <li>خبر فوری شماره ۲</li>
+        <li>خبر فوری شماره ۳</li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer>
+    تمامی حقوق محفوظ است © شبکه رسانه‌ای عماد
+  </footer>
 
 </body>
 </html>
