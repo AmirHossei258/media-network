@@ -1,114 +1,171 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>شبکه رسانه‌ای عماد</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>شبکه رسانه‌ای عماد - قالب مشابه Leader.ir</title>
   <style>
-    @font-face {
-      font-family: 'AbarHigh';
-      src: url('AbarHigh-Black.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
+    /* ریست پایه */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      font-family: 'AbarHigh', sans-serif;
-      margin: 0;
-      background-color: #f5f5f5;
-      color: #222;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
     header {
-      background-color: #002f3d;
-      color: white;
-      padding: 20px 40px;
+      background-color: #004466;
+      padding: 15px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      color: white;
+      font-weight: 600;
+      font-size: 1.3rem;
+      box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
-      font-size: 28px;
+      font-weight: 700;
+      font-size: 1.5rem;
+      cursor: pointer;
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      gap: 30px;
-      margin: 0;
-      padding: 0;
+      gap: 25px;
     }
 
     nav ul li {
       cursor: pointer;
+      padding: 6px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li:hover {
+      background-color: #0077b6;
+      color: white;
     }
 
     .container {
-      display: flex;
       max-width: 1200px;
-      margin: 20px auto;
-      gap: 20px;
-      padding: 0 15px;
+      margin: 30px auto;
+      padding: 0 20px;
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
     }
 
     main {
       flex: 3;
+      min-width: 300px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+      margin-bottom: 25px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      height: 180px;
+    }
+
+    .card-content {
+      padding: 15px 20px;
+    }
+
+    .card-content h3 {
+      margin-bottom: 10px;
+      color: #004466;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .card-content p {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.4;
     }
 
     aside {
       flex: 1;
-      background-color: white;
-      padding: 15px;
-      border: 1px solid #ddd;
-    }
-
-    .featured {
-      background-color: white;
-      border: 1px solid #ccc;
-      padding: 20px;
-      margin-bottom: 30px;
-    }
-
-    .featured img {
-      width: 100%;
-      border-radius: 8px;
-    }
-
-    .featured h2 {
-      margin-top: 15px;
-      color: #003147;
-    }
-
-    .section {
-      margin-bottom: 40px;
-    }
-
-    .section h3 {
-      border-right: 5px solid #003147;
-      padding-right: 10px;
-      color: #003147;
-    }
-
-    .section .news-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-      margin-top: 15px;
-    }
-
-    .news-grid article {
+      min-width: 250px;
       background: white;
-      padding: 15px;
-      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+      height: fit-content;
+      color: #004466;
+    }
+
+    aside h4 {
+      margin-bottom: 15px;
+      font-weight: 700;
+      border-bottom: 3px solid #0077b6;
+      padding-bottom: 8px;
+    }
+
+    aside ul {
+      list-style: none;
+    }
+
+    aside ul li {
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    aside ul li:hover {
+      color: #0077b6;
     }
 
     footer {
       text-align: center;
-      background-color: #002f3d;
+      padding: 15px 20px;
+      background-color: #004466;
       color: white;
-      padding: 15px;
       margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    /* ریسپانسیو */
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+      aside {
+        margin-top: 30px;
+      }
     }
   </style>
 </head>
@@ -127,47 +184,41 @@
 
   <div class="container">
     <main>
-      <section class="featured">
-        <img src="https://via.placeholder.com/900x400" alt="خبر ویژه">
-        <h2>عنوان خبر ویژه</h2>
-        <p>این بخش مخصوص نمایش مهم‌ترین خبر یا بیانیه با تصویر بزرگ و خلاصه‌ای کوتاه است.</p>
-      </section>
-
-      <section class="section">
-        <h3>فیلم</h3>
-        <div class="news-grid">
-          <article><h4>تیتر فیلم اول</h4><p>خلاصه‌ای از فیلم اول...</p></article>
-          <article><h4>تیتر فیلم دوم</h4><p>خلاصه‌ای از فیلم دوم...</p></article>
+      <div class="card">
+        <img src="https://via.placeholder.com/900x180" alt="خبر ویژه" />
+        <div class="card-content">
+          <h3>عنوان خبر ویژه</h3>
+          <p>این بخش مخصوص نمایش مهم‌ترین خبر یا بیانیه با تصویر بزرگ و خلاصه‌ای کوتاه است.</p>
         </div>
-      </section>
+      </div>
 
-      <section class="section">
-        <h3>اخبار</h3>
-        <div class="news-grid">
-          <article><h4>خبر اول</h4><p>متن کوتاه خبر اول...</p></article>
-          <article><h4>خبر دوم</h4><p>متن کوتاه خبر دوم...</p></article>
+      <div class="card">
+        <img src="https://via.placeholder.com/900x180" alt="فیلم اول" />
+        <div class="card-content">
+          <h3>تیتر فیلم اول</h3>
+          <p>خلاصه‌ای از فیلم اول...</p>
         </div>
-      </section>
+      </div>
 
-      <section class="section">
-        <h3>مقالات</h3>
-        <div class="news-grid">
-          <article><h4>مقاله اول</h4><p>چکیده مقاله اول...</p></article>
-          <article><h4>مقاله دوم</h4><p>چکیده مقاله دوم...</p></article>
+      <div class="card">
+        <img src="https://via.placeholder.com/900x180" alt="خبر اول" />
+        <div class="card-content">
+          <h3>خبر اول</h3>
+          <p>متن کوتاه خبر اول...</p>
         </div>
-      </section>
+      </div>
 
-      <section class="section">
-        <h3>تولیدات</h3>
-        <div class="news-grid">
-          <article><h4>محتوای اول</h4><p>شرح مختصر از محتوای اول...</p></article>
-          <article><h4>محتوای دوم</h4><p>شرح مختصر از محتوای دوم...</p></article>
+      <div class="card">
+        <img src="https://via.placeholder.com/900x180" alt="مقاله اول" />
+        <div class="card-content">
+          <h3>مقاله اول</h3>
+          <p>چکیده مقاله اول...</p>
         </div>
-      </section>
+      </div>
     </main>
 
     <aside>
-      <h3>اخبار فوری</h3>
+      <h4>اخبار فوری</h4>
       <ul>
         <li>بیانیه جدید منتشر شد...</li>
         <li>دیدار مهم با مقامات...</li>
