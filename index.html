@@ -3,122 +3,171 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>نو+عماد | قالب مشابه نو+جوان</title>
+  <title>نو+عماد | قالب شبیه نو+جوان</title>
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v34.0.1/dist/font-face.css" rel="stylesheet" />
   <style>
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      margin: 0; padding: 0; box-sizing: border-box;
     }
 
     body {
       font-family: 'Vazirmatn', sans-serif;
-      background-color: #f6f6f6;
-      display: flex;
-      min-height: 100vh;
+      background: #f0f0f0;
+      color: #333;
     }
 
-    /* Sidebar */
-    .sidebar {
-      width: 220px;
-      background-color: #002c49;
+    header {
+      background: #003d5b;
       color: white;
-      padding: 30px 20px;
-      position: fixed;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
       top: 0;
-      bottom: 0;
-      right: 0;
-      overflow-y: auto;
+      z-index: 999;
     }
 
-    .sidebar h1 {
-      font-size: 22px;
-      margin-bottom: 30px;
-      text-align: center;
-      color: #00e0ff;
+    header h1 {
+      font-size: 1.6rem;
     }
 
-    .sidebar ul {
+    nav {
+      background: #00577a;
+      padding: 10px 20px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
       list-style: none;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
-    .sidebar ul li {
-      padding: 12px 10px;
-      margin-bottom: 10px;
-      border-radius: 5px;
+    nav li {
+      padding: 6px 12px;
+      background: #00bcd4;
+      border-radius: 6px;
+      color: white;
+      font-weight: 600;
       transition: background 0.3s ease;
       cursor: pointer;
     }
 
-    .sidebar ul li:hover {
-      background-color: #00a6c2;
+    nav li:hover {
+      background: #00acc1;
     }
 
-    /* Main content */
-    .main {
-      margin-right: 220px;
-      padding: 30px;
-      flex: 1;
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
     }
 
     .card {
-      background-color: white;
-      padding: 20px;
+      position: relative;
       border-radius: 12px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
     }
 
-    .card h2 {
-      margin-bottom: 10px;
-      color: #003a5c;
+    .card:hover {
+      transform: translateY(-5px);
     }
 
-    .card p {
-      color: #444;
-      line-height: 1.7;
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .sidebar {
-        position: static;
-        width: 100%;
-        height: auto;
-      }
-      .main {
-        margin-right: 0;
-        padding: 20px;
+    .card .overlay {
+      position: absolute;
+      bottom: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+      color: white;
+      width: 100%;
+      padding: 15px;
+    }
+
+    .card .overlay h3 {
+      font-size: 1.1rem;
+    }
+
+    footer {
+      text-align: center;
+      background: #003d5b;
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header, nav {
+        flex-direction: column;
+        text-align: center;
       }
     }
   </style>
-  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v34.0.1/dist/font-face.css" rel="stylesheet" />
 </head>
 <body>
-  <aside class="sidebar">
+  <header>
     <h1>نو+عماد</h1>
-    <ul>
-      <li>خانه</li>
-      <li>پرونده</li>
-      <li>دیدار</li>
-      <li>قاب</li>
-      <li>تماشایی</li>
-      <li>شنیدنی</li>
-      <li>خواندنی</li>
-      <li>تعامل</li>
-    </ul>
-  </aside>
+    <span>رسانه نوجوانان انقلاب</span>
+  </header>
 
-  <main class="main">
+  <nav>
+    <ul>
+      <li style="background:#00bcd4;">خانه</li>
+      <li style="background:#4caf50;">پرونده</li>
+      <li style="background:#f44336;">دیدار</li>
+      <li style="background:#ff9800;">قاب</li>
+      <li style="background:#9c27b0;">شنیدنی</li>
+      <li style="background:#3f51b5;">خواندنی</li>
+      <li style="background:#009688;">تماشایی</li>
+    </ul>
+  </nav>
+
+  <main class="container">
     <div class="card">
-      <h2>عنوان خبر ویژه</h2>
-      <p>در این بخش می‌توانید خبر یا مطلب مهم خود را قرار دهید. این کارت مانند ساختار محتوای سایت نو+جوان طراحی شده است.</p>
+      <img src="https://via.placeholder.com/500x200" alt="خبر ویژه">
+      <div class="overlay">
+        <h3>عنوان محتوای ویژه</h3>
+      </div>
     </div>
 
     <div class="card">
-      <h2>مطالب جدید</h2>
-      <p>هر مطلب یا محتوایی که دارید می‌توانید در قالب این کارت‌ها نمایش دهید. بعداً می‌تونیم گالری، ویدیو، یا اسلایدر هم اضافه کنیم.</p>
+      <img src="https://via.placeholder.com/500x200" alt="قاب نو+جوان">
+      <div class="overlay">
+        <h3>قاب تصویری: جملات گرافیکی</h3>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/500x200" alt="دیدار مهم">
+      <div class="overlay">
+        <h3>دیدار با رهبر انقلاب</h3>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/500x200" alt="تماشایی">
+      <div class="overlay">
+        <h3>تماشایی: ویدیوهای جذاب</h3>
+      </div>
     </div>
   </main>
+
+  <footer>
+    © ۲۰۲۵ نو+عماد | تمام حقوق محفوظ است
+  </footer>
 </body>
 </html>
