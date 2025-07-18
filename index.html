@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>نو+عماد | قالب شبیه نو+جوان</title>
+  <title>نو+عماد | قالب حرفه‌ای</title>
   <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v34.0.1/dist/font-face.css" rel="stylesheet" />
   <style>
     * {
-      margin: 0; padding: 0; box-sizing: border-box;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
       font-family: 'Vazirmatn', sans-serif;
-      background: #f0f0f0;
+      background: #f2f2f2;
       color: #333;
     }
 
@@ -39,7 +41,7 @@
 
     nav ul {
       display: flex;
-      gap: 20px;
+      gap: 16px;
       list-style: none;
       justify-content: center;
       flex-wrap: wrap;
@@ -51,77 +53,103 @@
       border-radius: 6px;
       color: white;
       font-weight: 600;
-      transition: background 0.3s ease;
       cursor: pointer;
+      transition: background 0.3s ease;
     }
 
     nav li:hover {
       background: #00acc1;
     }
 
-    .container {
-      max-width: 1200px;
-      margin: 30px auto;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-    }
-
-    .card {
+    .slider {
       position: relative;
-      border-radius: 12px;
+      width: 100%;
+      height: 60vh;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      cursor: pointer;
-      transition: transform 0.3s ease;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
+    .slides {
+      display: flex;
+      transition: transform 0.8s ease-in-out;
+      height: 100%;
     }
 
-    .card img {
+    .slide {
+      min-width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .slide img {
       width: 100%;
-      height: 200px;
+      height: 100%;
       object-fit: cover;
-      display: block;
     }
 
-    .card .overlay {
+    .caption {
       position: absolute;
-      bottom: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
-      color: white;
-      width: 100%;
-      padding: 15px;
-    }
-
-    .card .overlay h3 {
-      font-size: 1.1rem;
-    }
-
-    footer {
-      text-align: center;
-      background: #003d5b;
-      color: white;
+      bottom: 20%;
+      right: 10%;
+      background: rgba(0,0,0,0.5);
       padding: 20px;
-      margin-top: 40px;
-      font-size: 0.9rem;
+      border-radius: 10px;
+      color: white;
     }
 
-    @media (max-width: 600px) {
-      header, nav {
-        flex-direction: column;
-        text-align: center;
+    .caption h2 {
+      margin-bottom: 10px;
+    }
+
+    .caption a {
+      padding: 8px 16px;
+      background: #00bcd4;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .slider-controls {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 20px;
+    }
+
+    .slider-controls span {
+      background: rgba(0,0,0,0.5);
+      color: white;
+      padding: 10px;
+      font-size: 24px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    @media (max-width: 768px) {
+      .caption {
+        bottom: 10%;
+        right: 5%;
+        padding: 10px;
+      }
+
+      .caption h2 {
+        font-size: 1rem;
+      }
+
+      .slider-controls span {
+        font-size: 18px;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>نو+عماد</h1>
-    <span>رسانه نوجوانان انقلاب</span>
+    <span>پایگاه نوجوانان انقلابی</span>
   </header>
 
   <nav>
@@ -131,43 +159,54 @@
       <li style="background:#f44336;">دیدار</li>
       <li style="background:#ff9800;">قاب</li>
       <li style="background:#9c27b0;">شنیدنی</li>
-      <li style="background:#3f51b5;">خواندنی</li>
-      <li style="background:#009688;">تماشایی</li>
+      <li style="background:#3f51b5;">تماشایی</li>
     </ul>
   </nav>
 
-  <main class="container">
-    <div class="card">
-      <img src="https://via.placeholder.com/500x200" alt="خبر ویژه">
-      <div class="overlay">
-        <h3>عنوان محتوای ویژه</h3>
+  <section class="slider">
+    <div class="slides" id="slides">
+      <div class="slide">
+        <img src="https://via.placeholder.com/1600x600/003d5b/ffffff?text=اسلاید+اول" alt="Slide 1" />
+        <div class="caption">
+          <h2>عنوان اسلاید اول</h2>
+          <a href="#">مشاهده</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="https://via.placeholder.com/1600x600/00577a/ffffff?text=اسلاید+دوم" alt="Slide 2" />
+        <div class="caption">
+          <h2>عنوان اسلاید دوم</h2>
+          <a href="#">مشاهده</a>
+        </div>
       </div>
     </div>
 
-    <div class="card">
-      <img src="https://via.placeholder.com/500x200" alt="قاب نو+جوان">
-      <div class="overlay">
-        <h3>قاب تصویری: جملات گرافیکی</h3>
-      </div>
+    <div class="slider-controls">
+      <span onclick="prevSlide()">❮</span>
+      <span onclick="nextSlide()">❯</span>
     </div>
+  </section>
 
-    <div class="card">
-      <img src="https://via.placeholder.com/500x200" alt="دیدار مهم">
-      <div class="overlay">
-        <h3>دیدار با رهبر انقلاب</h3>
-      </div>
-    </div>
+  <script>
+    let currentIndex = 0;
+    const slides = document.getElementById("slides");
+    const totalSlides = slides.children.length;
 
-    <div class="card">
-      <img src="https://via.placeholder.com/500x200" alt="تماشایی">
-      <div class="overlay">
-        <h3>تماشایی: ویدیوهای جذاب</h3>
-      </div>
-    </div>
-  </main>
+    function updateSlide() {
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
 
-  <footer>
-    © ۲۰۲۵ نو+عماد | تمام حقوق محفوظ است
-  </footer>
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlide();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlide();
+    }
+
+    setInterval(nextSlide, 5000); // هر 5 ثانیه اسلاید بعدی
+  </script>
 </body>
 </html>
