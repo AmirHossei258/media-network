@@ -3,20 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>شبکه رسانه‌ای عماد - قالب مشابه Leader.ir</title>
+  <title>شبکه رسانه‌ای عماد - قالب شبیه Leader.ir</title>
   <style>
-    /* ریست پایه */
+    /* Reset CSS */
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      margin: 0; padding: 0; box-sizing: border-box;
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f9f9f9;
-      color: #333;
+      font-family: 'Vazirmatn', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff;
+      color: #2a2a2a;
       line-height: 1.6;
+      direction: rtl;
     }
 
     a {
@@ -24,211 +23,78 @@
       color: inherit;
     }
 
+    /* Header */
     header {
-      background-color: #004466;
-      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      background: #004165;
+      color: #fff;
+      padding: 15px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      color: white;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 1.3rem;
-      box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
-      position: sticky;
-      top: 0;
       z-index: 100;
+      box-shadow: 0 3px 6px rgb(0 0 0 / 0.1);
     }
 
     .logo {
-      font-weight: 700;
-      font-size: 1.5rem;
       cursor: pointer;
+      font-size: 1.6rem;
+      letter-spacing: 1px;
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      gap: 25px;
+      gap: 30px;
     }
 
     nav ul li {
+      padding: 8px 14px;
       cursor: pointer;
-      padding: 6px 10px;
       border-radius: 5px;
       transition: background-color 0.3s ease;
     }
 
     nav ul li:hover {
-      background-color: #0077b6;
-      color: white;
+      background-color: #0080ff;
+      color: #fff;
     }
 
+    /* Container */
     .container {
-      max-width: 1200px;
-      margin: 30px auto;
+      max-width: 1180px;
+      margin: 40px auto;
       padding: 0 20px;
       display: flex;
-      gap: 25px;
+      gap: 30px;
       flex-wrap: wrap;
     }
 
+    /* Main Content */
     main {
       flex: 3;
       min-width: 300px;
     }
 
+    /* Cards */
     .card {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
-      margin-bottom: 25px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgb(0 0 0 / 0.07);
+      margin-bottom: 30px;
       overflow: hidden;
-      transition: transform 0.3s ease;
       cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgb(0 0 0 / 0.15);
     }
 
     .card img {
       width: 100%;
-      display: block;
-      object-fit: cover;
-      height: 180px;
-    }
-
-    .card-content {
-      padding: 15px 20px;
-    }
-
-    .card-content h3 {
-      margin-bottom: 10px;
-      color: #004466;
-      font-weight: 700;
-      font-size: 1.2rem;
-    }
-
-    .card-content p {
-      color: #555;
-      font-size: 0.95rem;
-      line-height: 1.4;
-    }
-
-    aside {
-      flex: 1;
-      min-width: 250px;
-      background: white;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
-      height: fit-content;
-      color: #004466;
-    }
-
-    aside h4 {
-      margin-bottom: 15px;
-      font-weight: 700;
-      border-bottom: 3px solid #0077b6;
-      padding-bottom: 8px;
-    }
-
-    aside ul {
-      list-style: none;
-    }
-
-    aside ul li {
-      margin-bottom: 12px;
-      font-size: 0.95rem;
-      cursor: pointer;
-      transition: color 0.3s ease;
-    }
-
-    aside ul li:hover {
-      color: #0077b6;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px 20px;
-      background-color: #004466;
-      color: white;
-      margin-top: 40px;
-      font-size: 0.9rem;
-    }
-
-    /* ریسپانسیو */
-    @media (max-width: 900px) {
-      .container {
-        flex-direction: column;
-      }
-      aside {
-        margin-top: 30px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="logo">شبکه رسانه‌ای عماد</div>
-    <nav>
-      <ul>
-        <li>فیلم</li>
-        <li>اخبار</li>
-        <li>مقالات</li>
-        <li>تولیدات</li>
-      </ul>
-    </nav>
-  </header>
-
-  <div class="container">
-    <main>
-      <div class="card">
-        <img src="https://via.placeholder.com/900x180" alt="خبر ویژه" />
-        <div class="card-content">
-          <h3>عنوان خبر ویژه</h3>
-          <p>این بخش مخصوص نمایش مهم‌ترین خبر یا بیانیه با تصویر بزرگ و خلاصه‌ای کوتاه است.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://via.placeholder.com/900x180" alt="فیلم اول" />
-        <div class="card-content">
-          <h3>تیتر فیلم اول</h3>
-          <p>خلاصه‌ای از فیلم اول...</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://via.placeholder.com/900x180" alt="خبر اول" />
-        <div class="card-content">
-          <h3>خبر اول</h3>
-          <p>متن کوتاه خبر اول...</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://via.placeholder.com/900x180" alt="مقاله اول" />
-        <div class="card-content">
-          <h3>مقاله اول</h3>
-          <p>چکیده مقاله اول...</p>
-        </div>
-      </div>
-    </main>
-
-    <aside>
-      <h4>اخبار فوری</h4>
-      <ul>
-        <li>بیانیه جدید منتشر شد...</li>
-        <li>دیدار مهم با مقامات...</li>
-        <li>فیلم جدید بارگذاری شد...</li>
-      </ul>
-    </aside>
-  </div>
-
-  <footer>
-    تمامی حقوق محفوظ است © شبکه رسانه‌ای عماد
-  </footer>
-</body>
-</html>
+      h
